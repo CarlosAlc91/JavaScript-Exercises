@@ -15,6 +15,8 @@ function contadorDeVocales(texto) {
   // Tu código:
 }
 
+console.log(contadorDeVocales(texto));
+
 function rango(inicio, final) {
   // Retrona un rango de números entre el número inicial y el número final.
   // El número inicial siempre será menor que el número final.
