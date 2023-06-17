@@ -84,8 +84,8 @@ console.log(asignarCalificacion(nota));
 
 /* *********************************************** */
 
-const usuario = null;
-const password = 12345;
+const usuario = "admin";
+const password = "12345";
 function iniciarSesion(usuario, password) {
   // Necesitamos saber si un usuario inició sesión correctamente tomando en cuenta los siguientes datos:
   // Si el usuario es 'admin' y la contraseña es '12345', el sistema mostrará 'Bienvenido admin'. 👍
@@ -100,7 +100,21 @@ function iniciarSesion(usuario, password) {
   // Ejemplo: in: null, '12345', out: 'Debes ingresar tu usuario'
   // Tu código:
 
-  if (usuario === "admin" && password === 12345) {
+  /* if (usuario === "admin") {
+    if (password === "12345") {
+      return "Bienvenido admin";
+    } else if (password === "" || password === null) {
+      return "Debes ingresar tu contraseña";
+    } else {
+      return "Contraseña incorrecta";
+    }
+  } else if (usuario === "" || usuario === null) {
+    return "Debes ingresar tu usuario";
+  } else {
+    return "Usuario incorrecto";
+  } */
+
+  if (usuario === "admin" && password === "12345") {
     return "Bienvenido usuario";
   } else if ((usuario === "admin" && password === " ") || password === null) {
     return "Debes ingresar tu contrasena";
@@ -117,10 +131,21 @@ console.log(iniciarSesion(usuario, password));
 
 /* *********************************************** */
 
+const articulo = "manzanas";
+const carrito = {};
 function carritoDeCompras(articulo, carrito) {
   // Necesitamos agregar un artículo al carrito de compras, pero debemos validar si el artículo existe, de ser así, debemos sumar uno a la cantidad, de lo contrario, debemos agregarlo y asignarle el valor de 1.
   // Ejemplo: in: 'manzanas', out: { manzanas: 1 }
+
+  if (carrito[articulo]) {
+    carrito[articulo]++;
+  } else {
+    carrito[articulo] = 1;
+  }
+  return carrito;
 }
+
+console.log(carritoDeCompras(articulo, carrito));
 
 /* *********************************************** */
 
@@ -142,7 +167,7 @@ const mitad = Math.floor(num1.length / 2);
 console.log(num1[mitad]);
 
 /* *********************************************** */
-
+let number = 8;
 function dobleONada(num) {
   // La función recibe un número. Usa el operador ternario para retornar:
   // Si es mayor a 10, retorna ese mismo número.
@@ -150,9 +175,27 @@ function dobleONada(num) {
   // Ejemplo: in: 8, out: 16
   // Ejemplo: in: 12, out: 12
   // Tu código:
+
+  /*  if (num > 10) {
+    return num;
+  } else {
+    return num * 2;
+  } */
+
+  /* 
+  
+  * ? => if
+  * : => else
+
+  */
+  return num > 10 ? num : num * 2;
 }
 
+console.log(dobleONada(number));
+
 /* *********************************************** */
+
+let str = "Hola";
 
 function soloMinusculas(str) {
   // La función recibe un string. Usa el operador ternario para retornar:
@@ -160,9 +203,15 @@ function soloMinusculas(str) {
   // De lo contrario, retorna 'Si, me gusta'.
   // Ejemplo: in: 'hola', out: 'Si, me gusta'
   // Tu código:
+
+  return str === str.toUpperCase(str) ? "No, megusta" : "Si, me gusta";
 }
 
+console.log(soloMinusculas(str));
+
 /* *********************************************** */
+
+let isPair = 11;
 
 function parOImpar(num) {
   // La función recibe un número. Usa el operador ternario para retornar:
@@ -171,10 +220,17 @@ function parOImpar(num) {
   // De lo contrario, retorna el número y el texto ' es impar'.
   // Ejemplo: in: 11, out: '11 es impar'
   // Tu código:
+
+  return num % 2 === 0
+    ? `El numero ${num} es par`
+    : `El numero ${num} no es par`;
 }
+
+console.log(parOImpar(isPair));
 
 /* *********************************************** */
 
+let pizza = "veggie";
 function pizzaNapolis(pizza) {
   let precio;
   // Utiliza la sentencia switch para evaluar el parámetro pizza y asignarle un precio:
@@ -188,4 +244,28 @@ function pizzaNapolis(pizza) {
   // Ejemplo: in: 'pepperoni', out: 'El precio de la pizza napolitana es de $100'
   // Ejemplo: in: 'veggie', out: 'No tenemos la pizza veggie'
   // Tu código:
+
+  switch (pizza) {
+    case "pepperoni":
+      console.log(`El precio de la pizza con ${pizza} es de $100`);
+      break;
+    case "hawaiana":
+      console.log(`El precio de la pizza ${pizza} es de $150`);
+      break;
+    case "mexicana":
+      console.log(`El precio de la pizza ${pizza} es de $200`);
+      break;
+    case "cuatro quesos":
+      console.log(`El precio de la pizza ${pizza} es de $250`);
+      break;
+    case "especial":
+      console.log(`El precio de la pizza ${pizza} es de $300`);
+      break;
+
+    default:
+      `No tenemos la pizza ${pizza}`;
+      break;
+  }
 }
+
+console.log(pizzaNapolis(pizza));
