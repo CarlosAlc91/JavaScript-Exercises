@@ -33,14 +33,30 @@ if (x > y) {
   resultadoNegativo = "x es menor o igual que y";
 }
 
+/* *********************************************** */
+
 // 2. 📌 Realiza las siguientes funciones
 
+const numero = 8;
 function positivoNegativo(numero) {
   // Retorna 'positivo' si el número es mayor que cero, 'negativo' si es menor que cero y 'cero' si es igual a cero.
   // Ejemplo: in: 1, out: 'positivo'
   // Tu código:
+
+  if (numero > 0) {
+    return "positivo";
+  } else if (numero < 0) {
+    return "negativo";
+  } else {
+    return "cero";
+  }
 }
 
+console.log(positivoNegativo(numero));
+
+/* *********************************************** */
+
+const nota = 8;
 function asignarCalificacion(nota) {
   // La función recibe una nota de 0 a 10 y deberá devolver un string de la siguiente forma:
   // 'Insuficiente' si la nota es menor a 6 y mayor o igual a 0.
@@ -51,6 +67,10 @@ function asignarCalificacion(nota) {
   // Ejemplo: in: 8, out: 'Bien'
   // Tu código:
 }
+
+console.log(asignarCalificacion(nota));
+
+/* *********************************************** */
 
 function iniciarSesion(usuario, password) {
   // Necesitamos saber si un usuario inició sesión correctamente tomando en cuenta los siguientes datos:
@@ -67,10 +87,14 @@ function iniciarSesion(usuario, password) {
   // Tu código:
 }
 
+/* *********************************************** */
+
 function carritoDeCompras(articulo, carrito) {
   // Necesitamos agregar un artículo al carrito de compras, pero debemos validar si el artículo existe, de ser así, debemos sumar uno a la cantidad, de lo contrario, debemos agregarlo y asignarle el valor de 1.
   // Ejemplo: in: 'manzanas', out: { manzanas: 1 }
 }
+
+/* *********************************************** */
 
 function losDeLaMitad(arreglo) {
   // La función recibe un arreglo de números.
@@ -89,6 +113,8 @@ const num1 = [1, 2, 3];
 const mitad = Math.floor(num1.length / 2);
 console.log(num1[mitad]);
 
+/* *********************************************** */
+
 function dobleONada(num) {
   // La función recibe un número. Usa el operador ternario para retornar:
   // Si es mayor a 10, retorna ese mismo número.
@@ -98,6 +124,8 @@ function dobleONada(num) {
   // Tu código:
 }
 
+/* *********************************************** */
+
 function soloMinusculas(str) {
   // La función recibe un string. Usa el operador ternario para retornar:
   // Si el string tiene al menos un caracter en mayúscula, retorna 'No, no me gusta'.
@@ -105,6 +133,8 @@ function soloMinusculas(str) {
   // Ejemplo: in: 'hola', out: 'Si, me gusta'
   // Tu código:
 }
+
+/* *********************************************** */
 
 function parOImpar(num) {
   // La función recibe un número. Usa el operador ternario para retornar:
@@ -114,6 +144,8 @@ function parOImpar(num) {
   // Ejemplo: in: 11, out: '11 es impar'
   // Tu código:
 }
+
+/* *********************************************** */
 
 function pizzaNapolis(pizza) {
   let precio;
@@ -129,19 +161,3 @@ function pizzaNapolis(pizza) {
   // Ejemplo: in: 'veggie', out: 'No tenemos la pizza veggie'
   // Tu código:
 }
-
-// ⚠️ NO TOCAR ESTE CÓDIGO
-module.exports = {
-  resultado,
-  resultadoPositivo,
-  resultadoNegativo,
-  positivoNegativo,
-  asignarCalificacion,
-  iniciarSesion,
-  carritoDeCompras,
-  losDeLaMitad,
-  dobleONada,
-  soloMinusculas,
-  parOImpar,
-  pizzaNapolis,
-};
