@@ -230,7 +230,7 @@ console.log(parOImpar(isPair));
 
 /* *********************************************** */
 
-let pizza = "veggie";
+let pizza = "hawaiana";
 function pizzaNapolis(pizza) {
   let precio;
   // Utiliza la sentencia switch para evaluar el parámetro pizza y asignarle un precio:
@@ -246,26 +246,26 @@ function pizzaNapolis(pizza) {
   // Tu código:
 
   switch (pizza) {
-    case "pepperoni":
-      console.log(`El precio de la pizza con ${pizza} es de $100`);
+    case "peperoni":
+      precio = 100;
       break;
     case "hawaiana":
-      console.log(`El precio de la pizza ${pizza} es de $150`);
+      precio = 150;
       break;
     case "mexicana":
-      console.log(`El precio de la pizza ${pizza} es de $200`);
+      precio = 200;
       break;
     case "cuatro quesos":
-      console.log(`El precio de la pizza ${pizza} es de $250`);
+      precio = 250;
       break;
     case "especial":
-      console.log(`El precio de la pizza ${pizza} es de $300`);
+      precio = 300;
       break;
 
     default:
-      `No tenemos la pizza ${pizza}`;
-      break;
+      return `No tenemos la pizza ${pizza}`;
   }
+  return `El precio de la pizza ${pizza} es de ${precio}`;
 }
 
 console.log(pizzaNapolis(pizza));
