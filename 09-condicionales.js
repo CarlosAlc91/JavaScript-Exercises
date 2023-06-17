@@ -207,11 +207,7 @@ console.log(dobleONada(number));
 
 /* *********************************************** */
 
-<<<<<<< HEAD
 let str = "hola";
-=======
-let str = "hola, Xomo te llamas";
->>>>>>> conditionals
 
 function soloMinusculas(str) {
   // La función recibe un string. Usa el operador ternario para retornar:
