@@ -58,18 +58,6 @@ function asignarCalificacion(nota) {
   // 'Nota inválida' si no cumple ninguno de los valores anteriores.
   // Ejemplo: in: 8, out: 'Bien'
   // Tu código:
-
-  if (nota >= 0 && nota < 6) {
-    return "Insuficiente";
-  } else if (nota === 6) {
-    return "Suficiente";
-  } else if (nota >= 7 && nota < 9) {
-    return "Bien";
-  } else if (nota >= 9 && nota <= 10) {
-    return "Excelente";
-  } else {
-    return "Nota inválida";
-  }
 }
 
 function iniciarSesion(usuario, password) {
