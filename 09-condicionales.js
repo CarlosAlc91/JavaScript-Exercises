@@ -149,6 +149,8 @@ console.log(carritoDeCompras(articulo, carrito));
 
 /* *********************************************** */
 
+const arr = [1, 2, 3, 4];
+
 function losDeLaMitad(arreglo) {
   // La función recibe un arreglo de números.
   // Si el arreglo tiene un número de elementos par, retorna los dos elementos del medio en un arreglo.
@@ -156,7 +158,15 @@ function losDeLaMitad(arreglo) {
   // Si el arreglo tiene un número de elementos impar, retorna el elemento del medio.
   // Ejemplo: in: [1, 2, 3], out: 2
   // Tu código:
+
+  const mitad = Math.floor(arreglo.length / 2);
   //? Math.float(x)
+
+  if (arreglo.length % 2 === 0) {
+    return [arreglo[mitad - 1], arreglo[mitad]];
+  } else {
+    return arreglo[mitad];
+  }
 }
 
 //* sacar la mitad
@@ -165,6 +175,8 @@ const num1 = [1, 2, 3];
 //? objeto Math
 const mitad = Math.floor(num1.length / 2);
 console.log(num1[mitad]);
+
+console.log(losDeLaMitad(arr));
 
 /* *********************************************** */
 let number = 8;
@@ -195,7 +207,11 @@ console.log(dobleONada(number));
 
 /* *********************************************** */
 
+<<<<<<< HEAD
 let str = "hola";
+=======
+let str = "hola, Xomo te llamas";
+>>>>>>> conditionals
 
 function soloMinusculas(str) {
   // La función recibe un string. Usa el operador ternario para retornar:
@@ -204,7 +220,7 @@ function soloMinusculas(str) {
   // Ejemplo: in: 'hola', out: 'Si, me gusta'
   // Tu código:
 
-  return str === str.toUpperCase(str) ? "No, megusta" : "Si, me gusta";
+  return str.toLowerCase() === str ? "Si, me gusta" : "No me gusta";
 }
 
 console.log(soloMinusculas(str));
