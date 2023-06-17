@@ -60,7 +60,7 @@ function puedeIngresarAlEvento(edad, permiso) {
 
 console.log(puedeIngresarAlEvento(edad, permiso));
 
-const nombre = "juan";
+const nombre = "";
 function cortoCircuito(nombre) {
   // La función recibe un string, nombre.
   // Tu labor es retornar un mensaje de bienvenida, si el nombre es válido. De lo contrario, retornar un mensaje con el nombre 'visitante'.
@@ -68,13 +68,14 @@ function cortoCircuito(nombre) {
   // Ejemplo: in: '', out: 'Bienvenido visitante'
   // Tu código:
 
-  if (nombre === "") {
+  /* if (nombre === "") {
     return "bienvenido visitante";
   } else {
     nombre;
   }
 
-  return `bienvenido ${nombre}`;
+  return `bienvenido ${nombre}`; */
+  return `Bienvenido ${nombre || "visitante"}`;
 }
 
 console.log(cortoCircuito(nombre));
