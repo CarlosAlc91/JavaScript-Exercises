@@ -32,21 +32,33 @@ const ejemplo5 = "hola";
 
 // 2. 📌 Realiza las siguientes funciones de operadores lógicos
 
+const visa = true;
+const passaporte = true;
 function puedeIngresarAlPais(visa, passaporte) {
   // La función recibe dos booleanos, visa y passaporte, ambos son requeridos.
   // Si visa o passaporte son true, retorna true.
   // De lo contrario, retorna false.
   // Ejemplo: in: true, true, out: true
   // Tu código:
+
+  return visa === passaporte;
 }
 
+console.log(puedeIngresarAlPais(visa, passaporte));
+
+const edad = 18;
+const permiso = true;
 function puedeIngresarAlEvento(edad, permiso) {
   // La función recibe dos booleanos, edad y permiso
   // Para ingresar a un evento, la edad debe ser mayor o igual a 18, o tener permiso de un adulto.
   // Si no tiene la edad requerida y tampoco el permiso, retorna false.
   // Ejemplo: in: 20, true, out: true
   // Tu código:
+
+  return edad >= 18 || permiso;
 }
+
+console.log(puedeIngresarAlEvento(edad, permiso));
 
 function cortoCircuito(nombre) {
   // La función recibe un string, nombre.
@@ -54,6 +66,4 @@ function cortoCircuito(nombre) {
   // Ejemplo: in: 'Juan', out: 'Bienvenido Juan'
   // Ejemplo: in: '', out: 'Bienvenido visitante'
   // Tu código:
-
-  return `Bienvenido ${nombre || "visitante"}`;
 }
