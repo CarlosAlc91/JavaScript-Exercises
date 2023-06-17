@@ -39,14 +39,6 @@ function positivoNegativo(numero) {
   // Retorna 'positivo' si el número es mayor que cero, 'negativo' si es menor que cero y 'cero' si es igual a cero.
   // Ejemplo: in: 1, out: 'positivo'
   // Tu código:
-
-  if (numero > 0) {
-    return "positivo";
-  } else if (numero < 0) {
-    return "negativo";
-  }
-
-  return "cero"; //? ya no utilizamos else, porque las condicionales ya estan haciendo el trabajo.
 }
 
 function asignarCalificacion(nota) {
@@ -55,7 +47,7 @@ function asignarCalificacion(nota) {
   // 'Suficiente' si la nota es igual a 6.
   // 'Bien' si la nota es mayor o igual a 7 y menor a 9.
   // 'Excelente' si la nota es mayor o igual a 9 y menor o igual a 10.
-  // 'Nota inválida' si no cumple ninguno de los valores anteriores.
+  // R'Nota inválida' si no cumple ninguno de los valores anteriores.
   // Ejemplo: in: 8, out: 'Bien'
   // Tu código:
 }
@@ -70,38 +62,14 @@ function iniciarSesion(usuario, password) {
   // Ejemplo: in: 'admin', '12345', out: 'Bienvenido admin'
   // Ejemplo: in: 'admin', '', out: 'Debes ingresar tu contraseña'
   // Ejemplo: in: 'admin', '1234', out: 'Contraseña incorrecta'
-  // Ejemplo: in: 'pepe', '12345', out: 'Usuario incorrecto'
+  // Ejemplo: in: 'pepe', '12345', out: 'Usuario incorrecto' R
   // Ejemplo: in: null, '12345', out: 'Debes ingresar tu usuario'
   // Tu código:
-
-  if (usuario === "admin") {
-    if (password === "12345") {
-      return "Bienvenido admin";
-    } else if (password === "" || password === null) {
-      return "Debes ingresar tu contraseña";
-    } else {
-      return "Contraseña incorrecta";
-    }
-  } else if (usuario === "" || usuario === null) {
-    return "Debes ingresar tu usuario";
-  } else {
-    return "Usuario incorrecto";
-  }
 }
 
 function carritoDeCompras(articulo, carrito) {
   // Necesitamos agregar un artículo al carrito de compras, pero debemos validar si el artículo existe, de ser así, debemos sumar uno a la cantidad, de lo contrario, debemos agregarlo y asignarle el valor de 1.
   // Ejemplo: in: 'manzanas', out: { manzanas: 1 }
-
-  if (carrito[articulo]) {
-    //? si el articulo esta en el carrito, aumentala ++
-    carrito[articulo]++;
-  } else {
-    //? si el articulo no esta en el carrito, agregla = 1
-    carrito[articulo] = 1;
-  }
-
-  return carrito;
 }
 
 function losDeLaMitad(arreglo) {
@@ -111,18 +79,7 @@ function losDeLaMitad(arreglo) {
   // Si el arreglo tiene un número de elementos impar, retorna el elemento del medio.
   // Ejemplo: in: [1, 2, 3], out: 2
   // Tu código:
-
   //? Math.float(x)
-
-  const mitad = Math.floor(arreglo.length / 2);
-
-  if (arreglo.length % 2 === 0) {
-    //? es un numero par
-    return [arreglo[mitad - 1], arreglo[mitad]];
-  } else {
-    //? es un numero impar
-    return arreglo[mitad];
-  }
 }
 
 //* sacar la mitad
@@ -139,9 +96,6 @@ function dobleONada(num) {
   // Ejemplo: in: 8, out: 16
   // Ejemplo: in: 12, out: 12
   // Tu código:
-
-  //?si es mayor a 10
-  return num > 10 ? num : num * 2;
 }
 
 function soloMinusculas(str) {
@@ -150,8 +104,6 @@ function soloMinusculas(str) {
   // De lo contrario, retorna 'Si, me gusta'.
   // Ejemplo: in: 'hola', out: 'Si, me gusta'
   // Tu código:
-  //? primero se convierte a minusculas y el otro str se deja con mayusculas
-  return str.toLowerCase() != str ? "No, no me gusta" : "Si, si me gusta";
 }
 
 function parOImpar(num) {
@@ -161,8 +113,6 @@ function parOImpar(num) {
   // De lo contrario, retorna el número y el texto ' es impar'.
   // Ejemplo: in: 11, out: '11 es impar'
   // Tu código:
-
-  return num % 2 === 0 ? `${num} es par` : `${num} es impar`;
 }
 
 function pizzaNapolis(pizza) {
