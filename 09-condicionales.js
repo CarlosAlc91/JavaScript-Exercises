@@ -66,18 +66,32 @@ function asignarCalificacion(nota) {
   // R'Nota inválida' si no cumple ninguno de los valores anteriores.
   // Ejemplo: in: 8, out: 'Bien'
   // Tu código:
+
+  if (nota < 6 && nota > 0) {
+    return "Insuficiente";
+  } else if (nota === 6) {
+    return "Suficiente";
+  } else if (nota >= 7 && nota < 9) {
+    return "Bien";
+  } else if (nota >= 9 && nota <= 10) {
+    return "Excelente";
+  } else {
+    return "Nota no valida";
+  }
 }
 
 console.log(asignarCalificacion(nota));
 
 /* *********************************************** */
 
+const usuario = null;
+const password = 12345;
 function iniciarSesion(usuario, password) {
   // Necesitamos saber si un usuario inició sesión correctamente tomando en cuenta los siguientes datos:
-  // Si el usuario es 'admin' y la contraseña es '12345', el sistema mostrará 'Bienvenido admin'.
-  // Si el usuario es 'admin' y la contraseña está vacía o es null, el sistema mostrará 'Debes ingresar tu contraseña'.
+  // Si el usuario es 'admin' y la contraseña es '12345', el sistema mostrará 'Bienvenido admin'. 👍
+  // Si el usuario es 'admin' y la contraseña está vacía o es null, el sistema mostrará 'Debes ingresar tu contraseña'.👍
   // De lo contrario, mostrará 'Contraseña incorrecta'.
-  // Si el usuario está vacío o es null, debe mostrar 'Debes ingresar tu usuario'.
+  // Si el usuario está vacío o es null, debe mostrar 'Debes ingresar tu usuario'.👍
   // Si el usuario es distinto de 'admin', debe mostrar 'Usuario incorrecto'.
   // Ejemplo: in: 'admin', '12345', out: 'Bienvenido admin'
   // Ejemplo: in: 'admin', '', out: 'Debes ingresar tu contraseña'
@@ -85,7 +99,21 @@ function iniciarSesion(usuario, password) {
   // Ejemplo: in: 'pepe', '12345', out: 'Usuario incorrecto' R
   // Ejemplo: in: null, '12345', out: 'Debes ingresar tu usuario'
   // Tu código:
+
+  if (usuario === "admin" && password === 12345) {
+    return "Bienvenido usuario";
+  } else if ((usuario === "admin" && password === " ") || password === null) {
+    return "Debes ingresar tu contrasena";
+  } else if (usuario === "" || usuario === null) {
+    return "Ingresa tu usuario";
+  } else if (usuario !== "admin") {
+    return "Usuario incorrecto";
+  } else {
+    return "Contrasena incorrecta";
+  }
 }
+
+console.log(iniciarSesion(usuario, password));
 
 /* *********************************************** */
 
