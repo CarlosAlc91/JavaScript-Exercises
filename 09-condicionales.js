@@ -195,7 +195,7 @@ console.log(dobleONada(number));
 
 /* *********************************************** */
 
-let str = "Hola";
+let str = "hola, Xomo te llamas";
 
 function soloMinusculas(str) {
   // La función recibe un string. Usa el operador ternario para retornar:
@@ -204,7 +204,7 @@ function soloMinusculas(str) {
   // Ejemplo: in: 'hola', out: 'Si, me gusta'
   // Tu código:
 
-  return str === str.toUpperCase(str) ? "No, megusta" : "Si, me gusta";
+  return str.toLowerCase() === str ? "Si, me gusta" : "No me gusta";
 }
 
 console.log(soloMinusculas(str));
