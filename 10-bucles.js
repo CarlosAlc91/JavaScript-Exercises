@@ -28,7 +28,7 @@ function contadorDeVocales(texto) {
   return sum;
 }
 
-console.log(contadorDeVocales(texto));
+console.log(contadorDeVocales(texto)); // 4
 
 /* ********************************************************************************* */
 
@@ -49,7 +49,7 @@ function rango(inicio, final) {
   return newArr;
 }
 
-console.log(rango(inicio, final));
+console.log(rango(inicio, final)); // [1, 2, 3, 4, 5]
 /* ********************************************************************************* */
 
 const numeros = [1, 2, 3];
@@ -72,7 +72,7 @@ function sumatoria(numeros) {
   return counter;
 }
 
-console.log(sumatoria(numeros));
+console.log(sumatoria(numeros)); //6
 /* ********************************************************************************* */
 const multiplo = 20;
 const final2 = 100;
@@ -88,13 +88,13 @@ function multiplosDeN(multiplo, final) {
   //? for loop
   for (let i = multiplo + 1; i < final; i++) {
     if (i % multiplo === 0 && i !== multiplo) {
-      numbersArr.push(multiplo);
+      numbersArr.push(i);
     }
   }
   return numbersArr;
 }
 
-console.log(multiplosDeN(multiplo, final2));
+console.log(multiplosDeN(multiplo, final2)); //[40, 60, 80]
 /* ********************************************************************************* */
 
 const numero = [15, 2, 35, 26];
@@ -115,7 +115,7 @@ function numeroMasGrande(numeros) {
   return max;
 }
 
-console.log(numeroMasGrande(numero));
+console.log(numeroMasGrande(numero)); // 35
 
 /*
  * let max = 0;
