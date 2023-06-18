@@ -52,16 +52,15 @@ function sumatoria(numeros) {
   // Tu código:
   //* se puede utilizar para sumar el total
 
-  let counter = 0
+  let counter = 0;
 
   for (let i = 0; i < numeros.length; i++) {
-    const num = numeros[i]
+    const num = numeros[i];
 
     if (num) {
-
     }
   }
-  return counter
+  return counter;
 }
 
 console.log(sumatoria(numeros));
