@@ -59,52 +59,126 @@ function sumatoria(numeros) {
   // Tu código:
   //* se puede utilizar para sumar el total
 
+  //? counter creation
   let counter = 0;
 
+  //? for loop
   for (let i = 0; i < numeros.length; i++) {
     const num = numeros[i];
 
-    if (num) {
-    }
+    //? addition assigment
+    counter += num;
   }
   return counter;
 }
 
 console.log(sumatoria(numeros));
 /* ********************************************************************************* */
-
+const multiplo = 20;
+const final2 = 100;
 function multiplosDeN(multiplo, final) {
   // Retrona los múltiplos de un número entre el número inicial y el número final sin incluir ambos números.
   // Ejemplo: in: 20, 100 out: [40, 60, 80]
   // Tu código:
   // n x m = r
-}
-/* ********************************************************************************* */
 
-//? podemos resolver el ejercicio de la edad que mas se repite, esta es la segunda parte.
+  //? empty array declaration
+  const numbersArr = [];
+
+  //? for loop
+  for (let i = multiplo + 1; i < final; i++) {
+    const num = multiplo[i];
+    if (num % 2 === 0) {
+    }
+  }
+
+  return numbersArr;
+}
+
+console.log(multiplosDeN(multiplo, final2));
+/* ********************************************************************************* */
 
 function numeroMasGrande(numeros) {
   // Retrona el número más grande de un array.
   // Ejemplo: in: [15, 2, 35, 26] out: 35
   // Tu código:
-  //? se crea una bandera para guardar el numero maximo tiene que ser menor al primero
 }
 
-//? podemos resolver el ejercicio de la edad que mas se repite, esta es la primer parte.
 /* ********************************************************************************* */
 
+const colores = ["rojo", "azul", "rojo", "verde", "azul", "rojo"];
 function contarColores(colores) {
   // Retrona el número de veces que se repite un color en un array.
   // Ejemplo: in: ['rojo', 'azul', 'rojo', 'verde', 'azul', 'rojo'] out: { rojo: 3, azul: 2, verde: 1 }
   // Tu código:
+
+  //* empty object declaration
+  let colorsObj = {};
+
+  //* for loop declaration to count and read colores array
+  for (let i = 0; i < colores.length; i++) {
+    const colors = colores[i];
+
+    if (colorsObj[colors]) {
+      colorsObj[colors]++;
+    } else {
+      colorsObj[colors] = 1;
+    }
+  }
+
+  return colorsObj;
 }
+
+console.log(contarColores(colores)); // out: { rojo: 3, azul: 2, verde: 1 }
+
+/*
+ * for (let i = 0; i < colores.length; i++)
+ * index starts at position 0; index is less than colores array in its .length; index iterates++
+ * const colors = colores[i];
+ * flag created
+ * if (colorsObj[colors])
+ * if (the object colorsObj finds a [color])
+ * colorsObj[colors]++;
+ * object colorsObj will increas it
+ *else {
+ * colorsObj[colors] = 1;
+ * otherwise object colorsObj adds [colors] to itself at position = 1
+ */
+
+/* ********************************************************************************* */
+
+const usuarios = [
+  { nombre: "John", edad: 19 },
+  { nombre: "Jane", edad: 21 },
+];
+
 function filtrarPorEdad(usuarios) {
   // Retrona un array con los usuarios que sean mayores de 20 pero menores de 30 años.
   // Ejemplo: in: [{ nombre: 'John', edad: 19 }, { nombre: 'Jane', edad: 21 }] out: [{ nombre: 'Jane', edad: 21 }]
   // Tu código:
+
+  let usersArr = [];
+  let usersObj = {};
+
+  for (let i = 0; i < usuarios.length; i++) {
+    const users = usuarios[i];
+
+    if (users.edad > 20 && users.edad < 30) {
+      usersObj[users.edad]++;
+    } else {
+      usersObj[users.edad] = 1;
+
+      usersObj = {
+        nombre: users.nombre,
+        edad: users.edad,
+      };
+      usersArr.push(usersObj);
+    }
+  }
+  return usersArr;
 }
 
-//* for of, for in
+console.log(filtrarPorEdad(usuarios));
 /* ********************************************************************************* */
 
 function contarLikesDeUsuarios(usuarios) {
