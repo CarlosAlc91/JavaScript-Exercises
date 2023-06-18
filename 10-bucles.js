@@ -87,22 +87,48 @@ function multiplosDeN(multiplo, final) {
 
   //? for loop
   for (let i = multiplo + 1; i < final; i++) {
-    const num = multiplo[i];
-    if (num % 2 === 0) {
+    if (i % multiplo === 0 && i !== multiplo) {
+      numbersArr.push(multiplo);
     }
   }
-
   return numbersArr;
 }
 
 console.log(multiplosDeN(multiplo, final2));
 /* ********************************************************************************* */
 
+const numero = [15, 2, 35, 26];
 function numeroMasGrande(numeros) {
   // Retrona el número más grande de un array.
   // Ejemplo: in: [15, 2, 35, 26] out: 35
   // Tu código:
+
+  let max = 0;
+
+  for (let i = 0; i < numeros.length; i++) {
+    const num = numeros[i];
+
+    if (num > max) {
+      max = num;
+    }
+  }
+  return max;
 }
+
+console.log(numeroMasGrande(numero));
+
+/*
+ * let max = 0;
+ * counter declaration
+ * for (let i = 0; i < numeros.length; i++) {
+ * index starts at position 0; index is less than colores array in its .length; index iterates++
+ * const num = numeros[i];
+ * flag creation for ease use
+ * if (num > max) => conditional
+ * if (num is greater than max)
+ * max = num;
+ * max receives such number
+ */
 
 /* ********************************************************************************* */
 
