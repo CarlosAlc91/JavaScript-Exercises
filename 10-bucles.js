@@ -40,7 +40,6 @@ function rango(inicio, final) {
   // Ejemplo: in: 1, 5 out: [1, 2, 3, 4, 5]
   // Tu código:
 
-  let newArr = [];
   let counter = 0;
 
   for (let i = inicio; i < final; i++) {
