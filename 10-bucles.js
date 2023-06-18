@@ -43,11 +43,7 @@ function rango(inicio, final) {
   const newArr = [];
 
   for (let i = inicio; i <= final; i++) {
-    const init = inicio[i];
-
-    if (init) {
-      newArr.push(init);
-    }
+    newArr.push(i);
   }
 
   return newArr;
