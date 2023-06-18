@@ -40,13 +40,13 @@ function rango(inicio, final) {
   // Ejemplo: in: 1, 5 out: [1, 2, 3, 4, 5]
   // Tu código:
 
-  let counter = 0;
+  const newArr = [];
 
-  for (let i = inicio; i < final; i++) {
+  for (let i = inicio; i <= final; i++) {
     const init = inicio[i];
-    const end = final;
 
-    if (inicio) {
+    if (init) {
+      newArr.push(init);
     }
   }
 
