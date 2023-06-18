@@ -158,27 +158,40 @@ function filtrarPorEdad(usuarios) {
   // Tu código:
 
   let usersArr = [];
-  let usersObj = {};
 
   for (let i = 0; i < usuarios.length; i++) {
     const users = usuarios[i];
 
     if (users.edad > 20 && users.edad < 30) {
-      usersObj[users.edad]++;
-    } else {
-      usersObj[users.edad] = 1;
-
-      usersObj = {
-        nombre: users.nombre,
-        edad: users.edad,
-      };
-      usersArr.push(usersObj);
+      usersArr.push(users);
     }
   }
+
+  //for (const iterator of object)
+
+  /*  for (const usr of usuarios) {
+    if (usr.edad > 20 && usr.edad < 30) {
+      usersArr.push(usr);
+    }
+  } */
+
   return usersArr;
 }
 
-console.log(filtrarPorEdad(usuarios));
+console.log(filtrarPorEdad(usuarios)); //[{ nombre: 'Jane', edad: 21 }]
+
+/*
+ * let usersArr = [];
+ * empty array declared
+ * for (let i = 0; i < usuarios.length; i++)
+ * for (idex starts at = 0; index is less than array in its .length; index iterates ++)
+ * const users = usuarios[i];
+ * flag declaration
+ * if (users.edad > 20 && users.edad < 30)
+ * if (users in its property .edad is greater than 20 and && users in its property .edad is less than 30)
+ * usersArr.push(users);
+ * usersArr recieves a .push(from users)
+ */
 /* ********************************************************************************* */
 
 function contarLikesDeUsuarios(usuarios) {
