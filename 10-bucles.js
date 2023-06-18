@@ -8,6 +8,7 @@
 
 // 1. 📌 Realiza los siguientes ejercicios con bucles
 
+const texto = "Hola Mundo";
 function contadorDeVocales(texto) {
   // Retrona el número de vocales que tiene un texto.
   // Ten en cuenta que una vocal puede estar en mayúscula o minúscula.
@@ -15,19 +16,56 @@ function contadorDeVocales(texto) {
   // Tu código:
 }
 
+console.log(contadorDeVocales(texto));
+
+/* ********************************************************************************* */
+
+const inicio = 1;
+const final = 5;
 function rango(inicio, final) {
   // Retrona un rango de números entre el número inicial y el número final.
   // El número inicial siempre será menor que el número final.
   // Ejemplo: in: 1, 5 out: [1, 2, 3, 4, 5]
   // Tu código:
+
+  let newArr = [];
+  let counter = 0;
+
+  for (let i = inicio; i < final; i++) {
+    const init = inicio[i];
+    const end = final;
+
+    if (inicio) {
+    }
+  }
+
+  return newArr;
 }
 
+console.log(rango(inicio, final));
+/* ********************************************************************************* */
+
+const numeros = [1, 2, 3];
 function sumatoria(numeros) {
   // Retrona la sumatoria de todos los números de un array.
   // Ejemplo: in: [1, 2, 3] out: 6
   // Tu código:
   //* se puede utilizar para sumar el total
+
+  let counter = 0
+
+  for (let i = 0; i < numeros.length; i++) {
+    const num = numeros[i]
+
+    if (num) {
+
+    }
+  }
+  return counter
 }
+
+console.log(sumatoria(numeros));
+/* ********************************************************************************* */
 
 function multiplosDeN(multiplo, final) {
   // Retrona los múltiplos de un número entre el número inicial y el número final sin incluir ambos números.
@@ -35,6 +73,7 @@ function multiplosDeN(multiplo, final) {
   // Tu código:
   // n x m = r
 }
+/* ********************************************************************************* */
 
 //? podemos resolver el ejercicio de la edad que mas se repite, esta es la segunda parte.
 
@@ -46,6 +85,7 @@ function numeroMasGrande(numeros) {
 }
 
 //? podemos resolver el ejercicio de la edad que mas se repite, esta es la primer parte.
+/* ********************************************************************************* */
 
 function contarColores(colores) {
   // Retrona el número de veces que se repite un color en un array.
@@ -59,24 +99,28 @@ function filtrarPorEdad(usuarios) {
 }
 
 //* for of, for in
+/* ********************************************************************************* */
 
 function contarLikesDeUsuarios(usuarios) {
   // Retrona el total de likes que tienen todos los usuarios.
   // Ejemplo: in: [{ nombre: 'John', likes: 2 }, { nombre: 'Jane', likes: 3 }] out: 5
   // Tu código:
 }
+/* ********************************************************************************* */
 
 function publicarPosts(posts) {
   // Retrona un array con los posts que tienen en su propiedad "estado" el valor de true.
   // Ejemplo: in: [{ titulo: 'Hola', estado: true }, { titulo: 'Mundo', estado: false }] out: [{ titulo: 'Hola', estado: true }]
   // Tu código:
 }
+/* ********************************************************************************* */
 
 function eliminarProducto(productos, idProducto) {
   // Retrona un array sin el producto que tiene el id que llega por parámetro.
   // Ejemplo: in: [{ id: 1, nombre: 'Mouse' }, { id: 2, nombre: 'Teclado' }], 2 out: [{ id: 1, nombre: 'Mouse' }]
   // Tu código:
 }
+/* ********************************************************************************* */
 
 function buscarPersona(personas, correo) {
   // Retrona un objeto de la persona que tiene el correo que llega por parámetro.
@@ -85,6 +129,7 @@ function buscarPersona(personas, correo) {
   // out: { nombre: 'Jane', correo: 'jane@mail' }
   // Tu código:
 }
+/* ********************************************************************************* */
 
 function contarSoloEstudiantesDeUnBootcamp(estudiantes, bootcamps, bootcamp) {
   // Retrona el número de estudiantes que pertenecen a un bootcamp en específico.
@@ -96,6 +141,7 @@ function contarSoloEstudiantesDeUnBootcamp(estudiantes, bootcamps, bootcamp) {
   // out: 2
   // Tu código:
 }
+/* ********************************************************************************* */
 
 function serieMasVistas(series) {
   // Retrona el nombre de la serie que tiene más vistas.
@@ -104,6 +150,7 @@ function serieMasVistas(series) {
   // out: 'Black Mirror'
   // Tu código:
 }
+/* ********************************************************************************* */
 
 function estudiantesPorModulo(personas, modulos) {
   // Retrona un array de objetos con el nombre de la persona, el nombre del módulo y el correo.
@@ -122,6 +169,7 @@ function estudiantesPorModulo(personas, modulos) {
 }
 
 /* 💡 Para el siguiente investiga sobre un método para arrays llamado arr.sort() */
+/* ********************************************************************************* */
 
 function ordenaPorEdad(personas) {
   // Retrona un array de personas ordenadas por edad de menor a mayor.
