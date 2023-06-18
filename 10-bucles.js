@@ -16,12 +16,12 @@ function contadorDeVocales(texto) {
   // Tu código:
 
   const vowels = ["a", "e", "i", "o", "u"];
-  const sum = 0;
+  let sum = 0;
 
   for (let i = 0; i < texto.length; i++) {
     const letter = texto[i].toLowerCase(vowels);
 
-    if (letter) {
+    if (vowels.includes(letter)) {
       sum++;
     }
   }
