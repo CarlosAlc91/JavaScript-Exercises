@@ -14,6 +14,18 @@ function contadorDeVocales(texto) {
   // Ten en cuenta que una vocal puede estar en mayúscula o minúscula.
   // Ejemplo: in: 'Hola Mundo' out: 4
   // Tu código:
+
+  const vowels = ["a", "e", "i", "o", "u"];
+  const sum = 0;
+
+  for (let i = 0; i < texto.length; i++) {
+    const letter = texto[i].toLowerCase(vowels);
+
+    if (letter) {
+      sum++;
+    }
+  }
+  return sum;
 }
 
 console.log(contadorDeVocales(texto));
