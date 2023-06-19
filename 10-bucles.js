@@ -260,7 +260,6 @@ const titlePosts = [
   { titulo: "Mundo", estado: false },
 ];
 
-console.log(titlePosts);
 function publicarPosts(posts) {
   // Retrona un array con los posts que tienen en su propiedad "estado" el valor de true.
   // Ejemplo: in: [{ titulo: 'Hola', estado: true }, { titulo: 'Mundo', estado: false }] out: [{ titulo: 'Hola', estado: true }]
@@ -359,18 +358,19 @@ const personas = [
 
 const correo = "jane@mail.com";
 function buscarPersona(personas, correo) {
-  /* for (person of personas) {
+  for (person of personas) {
     if (person.correo === correo) {
+      return person;
     }
-  } */
+  }
 
-  for (let i = 0; i < personas.length; i++) {
+  /*  for (let i = 0; i < personas.length; i++) {
     const person = personas[i];
 
     if (person.correo === correo) {
+      return person;
     }
-    return person;
-  }
+  } */
 }
 
 console.log(buscarPersona(personas, correo)); //{ nombre: 'Jane', correo: 'jane@mail' }
