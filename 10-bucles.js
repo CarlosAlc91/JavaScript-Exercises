@@ -356,39 +356,77 @@ const personas = [
   { nombre: "John", correo: "john@mail.com" },
   { nombre: "Jane", correo: "jane@mail" },
 ];
+
 const correo = "jane@mail.com";
 function buscarPersona(personas, correo) {
-  let personArr = [];
-
-  /*  for (let i = 0; i < personas.length; i++) {
-    const person = personas[i];
-
+  /* for (person of personas) {
     if (person.correo === correo) {
-      personArr.push(person);
     }
   } */
 
-  for (person of personas) {
+  for (let i = 0; i < personas.length; i++) {
+    const person = personas[i];
+
     if (person.correo === correo) {
-      personArr.push(person);
     }
+    return person;
   }
-  return personArr;
 }
 
-console.log(buscarPersona(personas, correo));
+console.log(buscarPersona(personas, correo)); //{ nombre: 'Jane', correo: 'jane@mail' }
+
+/*
+ * since we're getting asked only for the object:
+ * an empty array is not created
+ * for (let i = 0; i < personas.length; i++)
+ * for (index = starts at position 0; index is less than person in its .length; index iterates ++)
+ * const person = personas[i].correo;
+ * flag declaration with name person
+ * if (person === correo)
+ * conditional if (flag person is equal than === parameter correo)
+ * return flag person
+ */
 /* ********************************************************************************* */
 
+/* // Retrona el número de estudiantes que pertenecen a un bootcamp en específico.
+ Ejemplo:
+ in:
+ estudiantes: [{ nombre: 'John', bootcamp_id: 1 }, { nombre: 'Jane', bootcamp_id: 2 }, { nombre: 'Joe', bootcamp_id: 1 }]
+ bootcamps: [{ id: 1, nombre: 'Academlo' }, { id: 2, nombre: 'Otros' }]
+ bootcamp: 'Academlo'
+ out: 2
+ Tu código: */
+
+const estudiantes = [
+  { nombre: "John", bootcamp_id: 1 },
+  { nombre: "Jane", bootcamp_id: 2 },
+  { nombre: "Joe", bootcamp_id: 1 },
+];
+const bootcamps = [
+  { id: 1, nombre: "Academlo" },
+  { id: 2, nombre: "Otros" },
+];
+const bootcamp = "Academlo";
 function contarSoloEstudiantesDeUnBootcamp(estudiantes, bootcamps, bootcamp) {
-  // Retrona el número de estudiantes que pertenecen a un bootcamp en específico.
-  // Ejemplo:
-  // in:
-  // estudiantes: [{ nombre: 'John', bootcamp_id: 1 }, { nombre: 'Jane', bootcamp_id: 2 }, { nombre: 'Joe', bootcamp_id: 1 }]
-  // bootcamps: [{ id: 1, nombre: 'Academlo' }, { id: 2, nombre: 'Otros' }]
-  // bootcamp: 'Academlo'
-  // out: 2
-  // Tu código:
+  let counter = 0;
+  for (let i = 0; i < estudiantes.length; i++) {
+    const students = estudiantes[i];
+
+    for (let j = 0; j < bootcamps.length; j++) {
+      const camps = bootcamps[j];
+
+      if (students.bootcamp_id === camps.id) {
+        students[camps]++;
+      } else {
+        students[camps] = 1;
+      }
+      counter += bootcamp;
+    }
+  }
+  return counter;
 }
+
+console.log(contarLikesDeUsuarios(estudiantes, bootcamps, bootcamp));
 /* ********************************************************************************* */
 
 function serieMasVistas(series) {
