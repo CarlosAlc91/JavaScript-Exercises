@@ -220,18 +220,91 @@ console.log(filtrarPorEdad(usuarios)); //[{ nombre: 'Jane', edad: 21 }]
  */
 /* ********************************************************************************* */
 
+const usrArr = [
+  { nombre: "John", likes: 2 },
+  { nombre: "Jane", likes: 3 },
+];
 function contarLikesDeUsuarios(usuarios) {
   // Retrona el total de likes que tienen todos los usuarios.
   // Ejemplo: in: [{ nombre: 'John', likes: 2 }, { nombre: 'Jane', likes: 3 }] out: 5
   // Tu código:
+
+  let counter = 0;
+
+  for (let i = 0; i < usuarios.length; i++) {
+    const user = usuarios[i].likes;
+
+    counter += user;
+  }
+  return counter;
 }
+
+console.log(contarLikesDeUsuarios(usrArr)); //5
+
+/* 
+  * let counter = 0;
+  * counter declared
+  * for (let i = 0; i < usuarios.length; i++)
+  * for (index starts at 0; index is less than array on its .length; index iterates ++)
+  * const user = usuarios[i].likes;
+  * flag user created with usuarios with its property.likes
+  * counter += adds and asigns to user 
+  * return counter
+
+*/
 /* ********************************************************************************* */
 
+const titlePosts = [
+  { titulo: "Hola", estado: true },
+  { titulo: "Mundo", estado: false },
+];
+
+console.log(titlePosts);
 function publicarPosts(posts) {
   // Retrona un array con los posts que tienen en su propiedad "estado" el valor de true.
   // Ejemplo: in: [{ titulo: 'Hola', estado: true }, { titulo: 'Mundo', estado: false }] out: [{ titulo: 'Hola', estado: true }]
   // Tu código:
+  let tittleArr = [];
+  let obj = {};
+
+  for (let i = 0; i < posts.length; i++) {
+    const stage = posts[i];
+
+    if (stage.estado === true) {
+      obj = {
+        titulo: posts.titulo,
+        estado: posts.estado,
+      };
+      tittleArr.push(stage);
+    }
+  }
+  return tittleArr;
 }
+
+console.log(publicarPosts(titlePosts)); //[{ titulo: 'Hola', estado: true }]
+
+/*
+ * let tittleArr = [];
+ * declaration of an empty array
+ * let obj = {};
+ * declaration of an empty object
+ * for (let i = 0; i < posts.length; i++)
+ * for (index = starts at position 0; index < has is less than array's .length; index iterates ++)
+ * const stage = posts[i];
+ * flag stage declared = from parameter posts[i] at its initial position
+ * if (stage.estado === true)
+ * conditional if (flag stage at its .estado property is equals === than true)
+ * obj = {
+        titulo: posts.titulo,
+        estado: posts.estado,
+ *    };
+ * object invocation 
+ * create a property named titulo: from parameter post with its .property titulo,
+ * create a property named estado: from parameter post with its .property estasdo
+ * tittleArr.push(stage);
+ * insede tittleArr will be .pushe(flag stage)
+ * return tittleArr
+ */
 /* ********************************************************************************* */
 
 function eliminarProducto(productos, idProducto) {
