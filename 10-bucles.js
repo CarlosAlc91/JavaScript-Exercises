@@ -267,6 +267,13 @@ function publicarPosts(posts) {
   let tittleArr = [];
   let obj = {};
 
+  /*  for (stage of posts) {
+    if (stage.estado) {
+      // due to a falsy value the conditional if just reads the true value
+      tittleArr.push(stage);
+    }
+    return tittleArr; */
+
   for (let i = 0; i < posts.length; i++) {
     const stage = posts[i];
 
@@ -307,11 +314,41 @@ console.log(publicarPosts(titlePosts)); //[{ titulo: 'Hola', estado: true }]
  */
 /* ********************************************************************************* */
 
+const productos = [
+  { id: 1, nombre: "Mouse" },
+  { id: 2, nombre: "Teclado" },
+];
+const idProducto = 2;
 function eliminarProducto(productos, idProducto) {
   // Retrona un array sin el producto que tiene el id que llega por parámetro.
   // Ejemplo: in: [{ id: 1, nombre: 'Mouse' }, { id: 2, nombre: 'Teclado' }], 2 out: [{ id: 1, nombre: 'Mouse' }]
   // Tu código:
+
+  let productoArr = [];
+  /* let obj = {};
+
+  for (let i = 0; i < productos.length; i++) {
+    const product = productos[i];
+
+    if (product.id !== idProducto) {
+      obj = {
+        id: product.id,
+        nombre: product.nombre,
+      };
+      productoArr.push(product);
+    }
+  } */
+
+  for (product of productos) {
+    if (product.id !== idProducto) {
+      productoArr.push(product);
+    }
+  }
+
+  return productoArr;
 }
+
+console.log(eliminarProducto(productos, idProducto)); //[{ id: 1, nombre: 'Mouse' }]
 /* ********************************************************************************* */
 
 function buscarPersona(personas, correo) {
