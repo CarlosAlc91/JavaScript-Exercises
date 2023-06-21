@@ -413,7 +413,7 @@ function contarSoloEstudiantesDeUnBootcamp(estudiantes, bootcamps, bootcamp) {
     const students = estudiantes[i];
 
     for (let j = 0; j < bootcamps.length; j++) {
-      const classes = bootcamps[i];
+      const classes = bootcamps[j];
 
       if (students.bootcamp_id === classes.id && classes.nombre === bootcamp) {
         contador++;
