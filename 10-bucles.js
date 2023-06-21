@@ -358,11 +358,11 @@ const personas = [
 
 const correo = "jane@mail.com";
 function buscarPersona(personas, correo) {
-  for (person of personas) {
+  for (const person of personas) {
     if (person.correo === correo) {
-      return person;
     }
   }
+  return person;
 
   /*  for (let i = 0; i < personas.length; i++) {
     const person = personas[i];
