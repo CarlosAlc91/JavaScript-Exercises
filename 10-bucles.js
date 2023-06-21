@@ -525,7 +525,7 @@ const moduloss = [
 ];
 function estudiantesPorModulo(personas, modulos) {
   let personsArr = [];
-  let personsObj = {};
+  /* let personsObj = {}; */
 
   for (let i = 0; i < personas.length; i++) {
     const person = personas[i];
@@ -533,16 +533,16 @@ function estudiantesPorModulo(personas, modulos) {
     for (let j = 0; j < modulos.length; j++) {
       const stages = modulos[j];
 
-      if (
-        person.modulo_id === stages.id &&
-        person.modulo_id === stages.nombre
-      ) {
-        personsObj = {
-          nombre: person.nombre,
-          correo: person.correo,
-          modulo: stages.id,
-        };
-        personsArr.push(person);
+      if (person.modulo_id === stages.id) {
+        personsArr.push(
+          person[
+            {
+              nombre: person.nombre,
+              modulo: stages.nombre,
+              correo: person.correo,
+            }
+          ]
+        );
       }
     }
   }
