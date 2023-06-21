@@ -415,15 +415,17 @@ function contarSoloEstudiantesDeUnBootcamp(estudiantes, bootcamps, bootcamp) {
     for (let j = 0; j < bootcamps.length; j++) {
       const classes = bootcamps[i];
 
-      if (students.bootcamp_id === classes.id && classes.id === bootcamp) {
-        contador += classes;
+      if (students.bootcamp_id === classes.id && classes.nombre === bootcamp) {
+        contador++;
       }
     }
   }
   return contador;
 }
 
-console.log(contarLikesDeUsuarios(estudiantes, bootcamps, bootcamp));
+console.log(
+  contarSoloEstudiantesDeUnBootcamp(estudiantes, bootcamps, bootcamp)
+);
 /* ********************************************************************************* */
 
 function serieMasVistas(series) {
