@@ -612,4 +612,10 @@ function ordenaPorEdad(personas) {
   return orderedPeople;
 }
 
+/* 
+{ nombre: 'Maria', edad: 19 },
+{ nombre: 'Lukas', edad: 20 },
+{ nombre: 'Marcos', edad: 21 }
+
+*/
 console.log(ordenaPorEdad(unorderedPeople));
