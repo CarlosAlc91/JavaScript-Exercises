@@ -525,8 +525,20 @@ const moduloss = [
 ];
 function estudiantesPorModulo(personas, modulos) {
   let personsArr = [];
-  /* let personsObj = {}; */
 
+  /* for (const person of personas) {
+    for (const stage of modulos) {
+      if (person.modulo_id === stage.id) {
+        personsArr.push([
+          {
+            nombre: person.nombre,
+            modulo: stage.nombre,
+            correo: person.correo,
+          },
+        ]);
+      }
+    }
+  } */
   for (let i = 0; i < personas.length; i++) {
     const person = personas[i];
 
@@ -534,30 +546,66 @@ function estudiantesPorModulo(personas, modulos) {
       const stages = modulos[j];
 
       if (person.modulo_id === stages.id) {
-        personsArr.push(
-          person[
-            {
-              nombre: person.nombre,
-              modulo: stages.nombre,
-              correo: person.correo,
-            }
-          ]
-        );
+        personsArr.push({
+          nombre: person.nombre,
+          modulo: stages.nombre,
+          correo: person.correo,
+        });
       }
     }
   }
-
   return personsArr;
 }
 
 console.log(estudiantesPorModulo(personass, moduloss));
-/* 💡 Para el siguiente investiga sobre un método para arrays llamado arr.sort() */
+
+/* 
+  * let personsArr = [];
+  * empty array created = []
+  * nested bucle for 
+  * for (let i = 0; i < personas.length; i++)
+  * for (index starts at = 0; index is less than personas array in its .length; index iterates++)
+  * const person = personas[i];
+  * person flag created
+  * for (let j = 0; j < modulos.length; j++)
+  * for (index j starts at = 0; index j is less than modulos array in its .length; index j iterates)
+  * const stages = modulos[j];
+  * stages flag created
+  * if (person.modulo_id === stages.id)
+  * conditional if (person in its .modulo_id prooperty is equals to === stages in its .id property)
+  * personsArr.push({
+  *       nombre: person.nombre,
+  *       modulo: stages.nombre,
+  *       correo: person.correo,
+  *     });
+  * empty array personsArr.push a new object with properties from arrays
+  * return personsArr
+
+*/
 /* ********************************************************************************* */
 
+/* 💡 Para el siguiente investiga sobre un método para arrays llamado arr.sort() */
+// Retrona un array de personas ordenadas por edad de menor a mayor.
+// Ejemplo:
+// in: [{ nombre: 'Lukas', edad: 20 }, { nombre: 'Maria', edad: 19 }, { nombre: 'Marcos', edad: 21 }]
+// out: [{ nombre: 'Maria', edad: 19 }, { nombre: 'Lukas', edad: 20 }, { nombre: 'Marcos', edad: 21 }]
+// Tu código:
+
+const unorderedPeople = [
+  { nombre: "Lukas", edad: 20 },
+  { nombre: "Maria", edad: 19 },
+  { nombre: "Marcos", edad: 21 },
+];
 function ordenaPorEdad(personas) {
-  // Retrona un array de personas ordenadas por edad de menor a mayor.
-  // Ejemplo:
-  // in: [{ nombre: 'Lukas', edad: 20 }, { nombre: 'Maria', edad: 19 }, { nombre: 'Marcos', edad: 21 }]
-  // out: [{ nombre: 'Maria', edad: 19 }, { nombre: 'Lukas', edad: 20 }, { nombre: 'Marcos', edad: 21 }]
-  // Tu código:
+  let orderedPeople = [];
+
+  let people = personas.sort(function (a, b) {
+    return a.edad - b.edad;
+  });
+
+  orderedPeople.push(people);
+
+  return orderedPeople;
 }
+
+console.log(ordenaPorEdad());
