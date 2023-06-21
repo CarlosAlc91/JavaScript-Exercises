@@ -6,8 +6,9 @@
  * Tu soluciones deben ser genericas, es decir, no debes escribir datos directamente, sino utilizar los parámetros que reciben las funciones.
  */
 
-// 1. 📌 Realiza los siguientes ejercicios con bucles
+// 📌 Realiza los siguientes ejercicios con bucles
 
+// Exercise 1
 const texto = "Hola Mundo";
 function contadorDeVocales(texto) {
   // Retrona el número de vocales que tiene un texto.
@@ -30,7 +31,25 @@ function contadorDeVocales(texto) {
 
 console.log(contadorDeVocales(texto)); // 4
 
+/*
+ * const vowels = ["a", "e", "i", "o", "u"];
+ * vowels array created = [with vowels] so they can be splited
+ * let sum = 0;
+ * counter creation
+ * for (let i = 0; i < texto.length; i++)
+ * for (index starts at = 0; index is less than texto in its .length; index iterates++)
+ * const letter = texto[i].toLowerCase(vowels);
+ * flag letter created with .toLowerCase method (vowels array)
+ * if (vowels.includes(letter))
+ * conditional if (inside array vowels.includes(flag letter) )
+ * sum++;
+ * counter sum iterates++
+ * return sum
+ */
+
 /* ********************************************************************************* */
+
+// Exercise 2
 
 const inicio = 1;
 const final = 5;
@@ -50,6 +69,10 @@ function rango(inicio, final) {
 }
 
 console.log(rango(inicio, final)); // [1, 2, 3, 4, 5]
+
+/* 
+
+*/
 /* ********************************************************************************* */
 
 const numeros = [1, 2, 3];
@@ -356,20 +379,21 @@ const personas = [
   { nombre: "Jane", correo: "jane@mail" },
 ];
 
-const correo = "jane@mail.com";
+const correo = "jane@mail";
 function buscarPersona(personas, correo) {
-  /* for (const person of personas) {
+  /*  for (const person of personas) {
     if (person.correo === correo) {
+      return person;
     }
-    return person;
   } */
-  /* for (let i = 0; i < personas.length; i++) {
+
+  for (let i = 0; i < personas.length; i++) {
     const person = personas[i];
 
     if (person.correo === correo) {
+      return person;
     }
-    return person;
-  } */
+  }
 }
 
 console.log(buscarPersona(personas, correo)); //{ nombre: 'Jane', correo: 'jane@mail' }
@@ -425,34 +449,108 @@ function contarSoloEstudiantesDeUnBootcamp(estudiantes, bootcamps, bootcamp) {
 
 console.log(
   contarSoloEstudiantesDeUnBootcamp(estudiantes, bootcamps, bootcamp)
-);
+); // 2
+
+/*
+ * let contador = 0;
+ * counter creation
+ * a nested for is created:
+ * for (let i = 0; i < estudiantes.length; i++)
+ * for (index starts at = 0; index is less than estudiantes array in its .length; index iterates ++)
+ * const students = estudiantes[i];
+ * flag students created
+ * for (let j = 0; j < bootcamps.length; j++)
+ * for (index j starts at = 0; index j is less than bootcamps array in its .length; index j iterates ++)
+ * if (students.bootcamp_id === classes.id && classes.nombre === bootcamp)
+ * conditional if (students in its .bootcamp_id property is equals to === classes in its .id property and && clases in its .nombre property is equal to === bootcamp)
+ * contador++;
+ * counter contador iterates ++
+ * return contador
+ */
 /* ********************************************************************************* */
 
+// Retrona el nombre de la serie que tiene más vistas.
+// Ejemplo:
+// in: { 'Dark': 50, 'Game of Thrones': 10, 'Black Mirror': 100, 'Stranger Things': 80 }
+// out: 'Black Mirror'
+// Tu código:
+
+let seriesNet = {
+  " Dark": 50,
+  "Game of Thrones": 10,
+  "Black Mirror": 100,
+  "Stranger Things": 80,
+};
 function serieMasVistas(series) {
-  // Retrona el nombre de la serie que tiene más vistas.
-  // Ejemplo:
-  // in: { 'Dark': 50, 'Game of Thrones': 10, 'Black Mirror': 100, 'Stranger Things': 80 }
-  // out: 'Black Mirror'
-  // Tu código:
+  let max = 0;
+  let mostViewed = "";
+
+  for (const serie in series) {
+    if (series[serie] > max) {
+      max = series[serie];
+      mostViewed = serie;
+    }
+  }
+  return mostViewed;
 }
+console.log(serieMasVistas(seriesNet)); //Black Mirror
+
 /* ********************************************************************************* */
+// Retrona un array de objetos con el nombre de la persona, el nombre del módulo y el correo.
+// Ejemplo:
+// in:
+// personas: [
+// { nombre: 'Andrea', correo: 'Andrea@mail.com', modulo_id: 1 },
+// { nombre: 'Diego', correo: 'Diego@mail.com', modulo_id: 2 },
+// { nombre: 'Jesus', correo: 'Jesus@mail.com', modulo_id: 1 },
+// { nombre: 'Laura', correo: 'Laura@mail.com', modulo_id: 3 },
+// { nombre: 'Brayan', correo: 'Brayan@mail.com', modulo_id: 1}
+// ]
+// modulos: [{id:1, nombre: 'Fundamentos'}, { id:2, nombre: 'React'}, { id:3, nombre: 'Node'}]
+// out: [{ nombre: 'Andrea', modulo: 'Fundamentos', correo: 'Andrea@mail.com', ...}]
+// Tu código:
 
+const personass = [
+  { nombre: "Andrea", correo: "Andrea@mail.com", modulo_id: 1 },
+  { nombre: "Diego", correo: "Diego@mail.com", modulo_id: 2 },
+  { nombre: "Jesus", correo: "Jesus@mail.com", modulo_id: 1 },
+  { nombre: "Laura", correo: "Laura@mail.com", modulo_id: 3 },
+  { nombre: "Brayan", correo: "Brayan@mail.com", modulo_id: 1 },
+];
+
+const moduloss = [
+  { id: 1, nombre: "Fundamentos" },
+  { id: 2, nombre: "React" },
+  { id: 3, nombre: "Node" },
+];
 function estudiantesPorModulo(personas, modulos) {
-  // Retrona un array de objetos con el nombre de la persona, el nombre del módulo y el correo.
-  // Ejemplo:
-  // in:
-  // personas: [
-  // { nombre: 'Andrea', correo: 'Andrea@mail.com', modulo_id: 1 },
-  // { nombre: 'Diego', correo: 'Diego@mail.com', modulo_id: 2 },
-  // { nombre: 'Jesus', correo: 'Jesus@mail.com', modulo_id: 1 },
-  // { nombre: 'Laura', correo: 'Laura@mail.com', modulo_id: 3 },
-  // { nombre: 'Brayan', correo: 'Brayan@mail.com', modulo_id: 1}
-  // ]
-  // modulos: [{id:1, nombre: 'Fundamentos'}, { id:2, nombre: 'React'}, { id:3, nombre: 'Node'}]
-  // out: [{ nombre: 'Andrea', modulo: 'Fundamentos', correo: 'Andrea@mail.com', ...}]
-  // Tu código:
+  let personsArr = [];
+  let personsObj = {};
+
+  for (let i = 0; i < personas.length; i++) {
+    const person = personas[i];
+
+    for (let j = 0; j < modulos.length; j++) {
+      const stages = modulos[j];
+
+      if (
+        person.modulo_id === stages.id &&
+        person.modulo_id === stages.nombre
+      ) {
+        personsObj = {
+          nombre: person.nombre,
+          correo: person.correo,
+          modulo: stages.id,
+        };
+        personsArr.push(person);
+      }
+    }
+  }
+
+  return personsArr;
 }
 
+console.log(estudiantesPorModulo(personass, moduloss));
 /* 💡 Para el siguiente investiga sobre un método para arrays llamado arr.sort() */
 /* ********************************************************************************* */
 
