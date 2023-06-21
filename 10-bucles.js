@@ -358,19 +358,19 @@ const personas = [
 
 const correo = "jane@mail.com";
 function buscarPersona(personas, correo) {
-  for (const person of personas) {
+  /* for (const person of personas) {
+    if (person.correo === correo) {
+    }
+    return person;
+  } */
+
+  for (let i = 0; i < personas.length; i++) {
+    const person = personas[i];
+
     if (person.correo === correo) {
     }
     return person;
   }
-  
-  /*  for (let i = 0; i < personas.length; i++) {
-    const person = personas[i];
-
-    if (person.correo === correo) {
-      return person;
-    }
-  } */
 }
 
 console.log(buscarPersona(personas, correo)); //{ nombre: 'Jane', correo: 'jane@mail' }
