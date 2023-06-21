@@ -597,6 +597,10 @@ const unorderedPeople = [
   { nombre: "Marcos", edad: 21 },
 ];
 function ordenaPorEdad(personas) {
+  /*  return personas.sort(function (a, b) {
+    return a.edad - b.edad;
+  }); */
+
   let orderedPeople = [];
 
   let people = personas.sort(function (a, b) {
@@ -608,4 +612,4 @@ function ordenaPorEdad(personas) {
   return orderedPeople;
 }
 
-console.log(ordenaPorEdad());
+console.log(ordenaPorEdad(unorderedPeople));
