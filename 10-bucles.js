@@ -363,14 +363,13 @@ function buscarPersona(personas, correo) {
     }
     return person;
   } */
-
-  for (let i = 0; i < personas.length; i++) {
+  /* for (let i = 0; i < personas.length; i++) {
     const person = personas[i];
 
     if (person.correo === correo) {
     }
     return person;
-  }
+  } */
 }
 
 console.log(buscarPersona(personas, correo)); //{ nombre: 'Jane', correo: 'jane@mail' }
@@ -408,22 +407,20 @@ const bootcamps = [
 ];
 const bootcamp = "Academlo";
 function contarSoloEstudiantesDeUnBootcamp(estudiantes, bootcamps, bootcamp) {
-  let counter = 0;
+  let contador = 0;
+
   for (let i = 0; i < estudiantes.length; i++) {
     const students = estudiantes[i];
 
     for (let j = 0; j < bootcamps.length; j++) {
-      const camps = bootcamps[j];
+      const classes = bootcamps[i];
 
-      if (students.bootcamp_id === camps.id) {
-        students[camps]++;
-      } else {
-        students[camps] = 1;
+      if (students.bootcamp_id === classes.id && classes.id === bootcamp) {
+        contador += classes;
       }
-      counter += bootcamp;
     }
   }
-  return counter;
+  return contador;
 }
 
 console.log(contarLikesDeUsuarios(estudiantes, bootcamps, bootcamp));
