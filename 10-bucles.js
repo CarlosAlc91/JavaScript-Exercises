@@ -693,3 +693,16 @@ function ordenaPorEdad(personas) {
 
 */
 console.log(ordenaPorEdad(unorderedPeople)); //[{ nombre: 'Maria', edad: 19 }, { nombre: 'Lukas', edad: 20 }, { nombre: 'Marcos', edad: 21 }]
+
+/*
+ *            RESOLUTION STEPS:
+ * let orderedPeople = [];
+ * empty array creation
+ * let people = personas.sort(function (a, b) {
+ *   return a.edad - b.edad;
+ * });
+ * creation of a variable people to save a sorting function with edad properties a.edad - b.edad
+ * orderedPeople.push(people);
+ * pushing into orderedPeople(people)
+ * return orderedPeople
+ */
