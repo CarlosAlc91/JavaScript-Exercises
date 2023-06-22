@@ -9,13 +9,14 @@
 // 📌 Realiza los siguientes ejercicios con bucles
 
 // Exercise 1
+
+/* Retrona el número de vocales que tiene un texto.
+ Ten en cuenta que una vocal puede estar en mayúscula o minúscula.
+ Ejemplo: in: 'Hola Mundo' out: 4
+ Tu código: */
+
 const texto = "Hola Mundo";
 function contadorDeVocales(texto) {
-  // Retrona el número de vocales que tiene un texto.
-  // Ten en cuenta que una vocal puede estar en mayúscula o minúscula.
-  // Ejemplo: in: 'Hola Mundo' out: 4
-  // Tu código:
-
   const vowels = ["a", "e", "i", "o", "u"];
   let sum = 0;
 
@@ -32,6 +33,7 @@ function contadorDeVocales(texto) {
 console.log(contadorDeVocales(texto)); // 4
 
 /*
+ *            RESOLUTION STEPS:
  * const vowels = ["a", "e", "i", "o", "u"];
  * vowels array created = [with vowels] so they can be splited
  * let sum = 0;
@@ -51,14 +53,14 @@ console.log(contadorDeVocales(texto)); // 4
 
 // Exercise 2
 
+/* Retrona un rango de números entre el número inicial y el número final.
+ El número inicial siempre será menor que el número final.
+ Ejemplo: in: 1, 5 out: [1, 2, 3, 4, 5]
+ Tu código: */
+
 const inicio = 1;
 const final = 5;
 function rango(inicio, final) {
-  // Retrona un rango de números entre el número inicial y el número final.
-  // El número inicial siempre será menor que el número final.
-  // Ejemplo: in: 1, 5 out: [1, 2, 3, 4, 5]
-  // Tu código:
-
   const newArr = [];
 
   for (let i = inicio; i <= final; i++) {
@@ -70,18 +72,27 @@ function rango(inicio, final) {
 
 console.log(rango(inicio, final)); // [1, 2, 3, 4, 5]
 
-/* 
-
-*/
+/*
+ *            RESOLUTION STEPS:
+ * const newArr = [];
+ * empty array creation
+ * for (let i = inicio; i <= final; i++)
+ * for (index starts at = 0; index is less than or equals to final; index iterates ++)
+ * newArr.push(i);
+ * invocation of empty array newArr.push(i)
+ * return newArr
+ */
 /* ********************************************************************************* */
+
+// exercise 3
+
+/* Retrona la sumatoria de todos los números de un array.
+Ejemplo: in: [1, 2, 3] out: 6
+Tu código:
+ se puede utilizar para sumar el total */
 
 const numeros = [1, 2, 3];
 function sumatoria(numeros) {
-  // Retrona la sumatoria de todos los números de un array.
-  // Ejemplo: in: [1, 2, 3] out: 6
-  // Tu código:
-  //* se puede utilizar para sumar el total
-
   //? counter creation
   let counter = 0;
 
@@ -96,15 +107,30 @@ function sumatoria(numeros) {
 }
 
 console.log(sumatoria(numeros)); //6
+
+/*
+ *            RESOLUTION STEPS:
+ * let counter = 0;
+ * counter creation
+ * for (let i = 0; i < numeros.length; i++)
+ * for (index starts at = 0; index is less than its .lengthl; index iterates ++)
+ * const num = numeros[i]
+ * num flag creation
+ * counter adds and assigns to num flag
+ * return counter
+ */
 /* ********************************************************************************* */
+
+// exercise 5
+
+// Retrona los múltiplos de un número entre el número inicial y el número final sin incluir ambos números.
+// Ejemplo: in: 20, 100 out: [40, 60, 80]
+// Tu código:
+// n x m = r
+
 const multiplo = 20;
 const final2 = 100;
 function multiplosDeN(multiplo, final) {
-  // Retrona los múltiplos de un número entre el número inicial y el número final sin incluir ambos números.
-  // Ejemplo: in: 20, 100 out: [40, 60, 80]
-  // Tu código:
-  // n x m = r
-
   //? empty array declaration
   const numbersArr = [];
 
@@ -118,14 +144,30 @@ function multiplosDeN(multiplo, final) {
 }
 
 console.log(multiplosDeN(multiplo, final2)); //[40, 60, 80]
+
+/*
+ *            RESOLUTION STEPS:
+ * const numbersArr = [];
+ * empty array creation
+ * for (let i = multiplo + 1; i < final; i++)
+ * for (index starts at = multiplo and adds + 1 so it won't include the first number; index has to be less than final; index iterates ++)
+ * if (i % multiplo === 0 && i !== multiplo)
+ * condition if (index remainds % from multiplo is equals === to 0 && and index is different than !== multiplo)
+ * numbersArr.push(i);
+ * empty array  numbersArr.pushes(i)
+ * return numbersArr
+ */
+
 /* ********************************************************************************* */
+
+// exercise 6
+
+/* Retrona el número más grande de un array.
+Ejemplo: in: [15, 2, 35, 26] out: 35
+Tu código: */
 
 const numero = [15, 2, 35, 26];
 function numeroMasGrande(numeros) {
-  // Retrona el número más grande de un array.
-  // Ejemplo: in: [15, 2, 35, 26] out: 35
-  // Tu código:
-
   let max = 0;
 
   for (let i = 0; i < numeros.length; i++) {
@@ -141,6 +183,7 @@ function numeroMasGrande(numeros) {
 console.log(numeroMasGrande(numero)); // 35
 
 /*
+ *            RESOLUTION STEPS:
  * let max = 0;
  * counter declaration
  * for (let i = 0; i < numeros.length; i++) {
@@ -155,12 +198,14 @@ console.log(numeroMasGrande(numero)); // 35
 
 /* ********************************************************************************* */
 
+// exercise
+
+/* Retrona el número de veces que se repite un color en un array.
+Ejemplo: in: ['rojo', 'azul', 'rojo', 'verde', 'azul', 'rojo'] out: { rojo: 3, azul: 2, verde: 1 }
+Tu código: */
+
 const colores = ["rojo", "azul", "rojo", "verde", "azul", "rojo"];
 function contarColores(colores) {
-  // Retrona el número de veces que se repite un color en un array.
-  // Ejemplo: in: ['rojo', 'azul', 'rojo', 'verde', 'azul', 'rojo'] out: { rojo: 3, azul: 2, verde: 1 }
-  // Tu código:
-
   //* empty object declaration
   let colorsObj = {};
 
@@ -181,6 +226,7 @@ function contarColores(colores) {
 console.log(contarColores(colores)); // out: { rojo: 3, azul: 2, verde: 1 }
 
 /*
+ *            RESOLUTION STEPS:
  * for (let i = 0; i < colores.length; i++)
  * index starts at position 0; index is less than colores array in its .length; index iterates++
  * const colors = colores[i];
@@ -196,16 +242,18 @@ console.log(contarColores(colores)); // out: { rojo: 3, azul: 2, verde: 1 }
 
 /* ********************************************************************************* */
 
+// exercise 8
+
+/* Retrona un array con los usuarios que sean mayores de 20 pero menores de 30 años.
+Ejemplo: in: [{ nombre: 'John', edad: 19 }, { nombre: 'Jane', edad: 21 }] out: [{ nombre: 'Jane', edad: 21 }]
+Tu código: */
+
 const usuarios = [
   { nombre: "John", edad: 19 },
   { nombre: "Jane", edad: 21 },
 ];
 
 function filtrarPorEdad(usuarios) {
-  // Retrona un array con los usuarios que sean mayores de 20 pero menores de 30 años.
-  // Ejemplo: in: [{ nombre: 'John', edad: 19 }, { nombre: 'Jane', edad: 21 }] out: [{ nombre: 'Jane', edad: 21 }]
-  // Tu código:
-
   let usersArr = [];
 
   for (let i = 0; i < usuarios.length; i++) {
@@ -231,6 +279,7 @@ function filtrarPorEdad(usuarios) {
 console.log(filtrarPorEdad(usuarios)); //[{ nombre: 'Jane', edad: 21 }]
 
 /*
+ *            RESOLUTION STEPS:
  * let usersArr = [];
  * empty array declared
  * for (let i = 0; i < usuarios.length; i++)
@@ -244,15 +293,17 @@ console.log(filtrarPorEdad(usuarios)); //[{ nombre: 'Jane', edad: 21 }]
  */
 /* ********************************************************************************* */
 
+// exercise 9
+
+/* Retrona el total de likes que tienen todos los usuarios.
+Ejemplo: in: [{ nombre: 'John', likes: 2 }, { nombre: 'Jane', likes: 3 }] out: 5
+Tu código: */
+
 const usrArr = [
   { nombre: "John", likes: 2 },
   { nombre: "Jane", likes: 3 },
 ];
 function contarLikesDeUsuarios(usuarios) {
-  // Retrona el total de likes que tienen todos los usuarios.
-  // Ejemplo: in: [{ nombre: 'John', likes: 2 }, { nombre: 'Jane', likes: 3 }] out: 5
-  // Tu código:
-
   let counter = 0;
 
   for (let i = 0; i < usuarios.length; i++) {
@@ -266,6 +317,7 @@ function contarLikesDeUsuarios(usuarios) {
 console.log(contarLikesDeUsuarios(usrArr)); //5
 
 /* 
+  *            RESOLUTION STEPS:
   * let counter = 0;
   * counter declared
   * for (let i = 0; i < usuarios.length; i++)
@@ -278,15 +330,18 @@ console.log(contarLikesDeUsuarios(usrArr)); //5
 */
 /* ********************************************************************************* */
 
+// exercise 10
+
+/* Retrona un array con los posts que tienen en su propiedad "estado" el valor de true.
+Ejemplo: in: [{ titulo: 'Hola', estado: true }, { titulo: 'Mundo', estado: false }] out: [{ titulo: 'Hola', estado: true }]
+Tu código: */
+
 const titlePosts = [
   { titulo: "Hola", estado: true },
   { titulo: "Mundo", estado: false },
 ];
 
 function publicarPosts(posts) {
-  // Retrona un array con los posts que tienen en su propiedad "estado" el valor de true.
-  // Ejemplo: in: [{ titulo: 'Hola', estado: true }, { titulo: 'Mundo', estado: false }] out: [{ titulo: 'Hola', estado: true }]
-  // Tu código:
   let tittleArr = [];
 
   /*  for (stage of posts) {
@@ -309,6 +364,7 @@ function publicarPosts(posts) {
 console.log(publicarPosts(titlePosts)); //[{ titulo: 'Hola', estado: true }]
 
 /*
+ *            RESOLUTION STEPS:
  * let tittleArr = [];
  * declaration of an empty array
  * for (let i = 0; i < posts.length; i++)
@@ -323,16 +379,18 @@ console.log(publicarPosts(titlePosts)); //[{ titulo: 'Hola', estado: true }]
  */
 /* ********************************************************************************* */
 
+// exercise 11
+
+/* Retrona un array sin el producto que tiene el id que llega por parámetro.
+Ejemplo: in: [{ id: 1, nombre: 'Mouse' }, { id: 2, nombre: 'Teclado' }], 2 out: [{ id: 1, nombre: 'Mouse' }]
+Tu código: */
+
 const productos = [
   { id: 1, nombre: "Mouse" },
   { id: 2, nombre: "Teclado" },
 ];
 const idProducto = 2;
 function eliminarProducto(productos, idProducto) {
-  // Retrona un array sin el producto que tiene el id que llega por parámetro.
-  // Ejemplo: in: [{ id: 1, nombre: 'Mouse' }, { id: 2, nombre: 'Teclado' }], 2 out: [{ id: 1, nombre: 'Mouse' }]
-  // Tu código:
-
   let productoArr = [];
 
   /*  for (product of productos) {
@@ -355,6 +413,7 @@ function eliminarProducto(productos, idProducto) {
 console.log(eliminarProducto(productos, idProducto)); //[{ id: 1, nombre: 'Mouse' }]
 
 /*
+ *            RESOLUTION STEPS:
  * let productoArr = [];
  * creation of an empty array
  * for (let i = 0; i < productos.length; i++)
@@ -368,11 +427,14 @@ console.log(eliminarProducto(productos, idProducto)); //[{ id: 1, nombre: 'Mouse
  * return productArr
  */
 /* ********************************************************************************* */
-// Retrona un objeto de la persona que tiene el correo que llega por parámetro.
-// Ejemplo:
-// in: [{ nombre: 'John', correo: 'john@mail.com' }, { nombre: 'Jane', correo: 'jane@mail' }], 'jane@mail.com'
-// out: { nombre: 'Jane', correo: 'jane@mail' }
-// Tu código:
+
+// exercise 12
+
+/* Retrona un objeto de la persona que tiene el correo que llega por parámetro.
+Ejemplo:
+in: [{ nombre: 'John', correo: 'john@mail.com' }, { nombre: 'Jane', correo: 'jane@mail' }], 'jane@mail.com'
+out: { nombre: 'Jane', correo: 'jane@mail' }
+Tu código: */
 
 const personas = [
   { nombre: "John", correo: "john@mail.com" },
@@ -399,6 +461,7 @@ function buscarPersona(personas, correo) {
 console.log(buscarPersona(personas, correo)); //{ nombre: 'Jane', correo: 'jane@mail' }
 
 /*
+ *            RESOLUTION STEPS:
  * since we're getting asked only for the object:
  * an empty array is not created
  * for (let i = 0; i < personas.length; i++)
@@ -410,6 +473,8 @@ console.log(buscarPersona(personas, correo)); //{ nombre: 'Jane', correo: 'jane@
  * return flag person
  */
 /* ********************************************************************************* */
+
+// exercise 13
 
 /* // Retrona el número de estudiantes que pertenecen a un bootcamp en específico.
  Ejemplo:
@@ -452,6 +517,7 @@ console.log(
 ); // 2
 
 /*
+ *            RESOLUTION STEPS:
  * let contador = 0;
  * counter creation
  * a nested for is created:
@@ -469,11 +535,13 @@ console.log(
  */
 /* ********************************************************************************* */
 
-// Retrona el nombre de la serie que tiene más vistas.
-// Ejemplo:
-// in: { 'Dark': 50, 'Game of Thrones': 10, 'Black Mirror': 100, 'Stranger Things': 80 }
-// out: 'Black Mirror'
-// Tu código:
+// exercise 14
+
+/* Retrona el nombre de la serie que tiene más vistas.
+Ejemplo:
+in: { 'Dark': 50, 'Game of Thrones': 10, 'Black Mirror': 100, 'Stranger Things': 80 }
+out: 'Black Mirror'
+Tu código: */
 
 let seriesNet = {
   " Dark": 50,
@@ -496,19 +564,22 @@ function serieMasVistas(series) {
 console.log(serieMasVistas(seriesNet)); //Black Mirror
 
 /* ********************************************************************************* */
-// Retrona un array de objetos con el nombre de la persona, el nombre del módulo y el correo.
-// Ejemplo:
-// in:
-// personas: [
-// { nombre: 'Andrea', correo: 'Andrea@mail.com', modulo_id: 1 },
-// { nombre: 'Diego', correo: 'Diego@mail.com', modulo_id: 2 },
-// { nombre: 'Jesus', correo: 'Jesus@mail.com', modulo_id: 1 },
-// { nombre: 'Laura', correo: 'Laura@mail.com', modulo_id: 3 },
-// { nombre: 'Brayan', correo: 'Brayan@mail.com', modulo_id: 1}
-// ]
-// modulos: [{id:1, nombre: 'Fundamentos'}, { id:2, nombre: 'React'}, { id:3, nombre: 'Node'}]
-// out: [{ nombre: 'Andrea', modulo: 'Fundamentos', correo: 'Andrea@mail.com', ...}]
-// Tu código:
+
+// exercise 15
+
+/* Retrona un array de objetos con el nombre de la persona, el nombre del módulo y el correo.
+Ejemplo:
+in:
+personas: [
+{ nombre: 'Andrea', correo: 'Andrea@mail.com', modulo_id: 1 },
+{ nombre: 'Diego', correo: 'Diego@mail.com', modulo_id: 2 },
+{ nombre: 'Jesus', correo: 'Jesus@mail.com', modulo_id: 1 },
+{ nombre: 'Laura', correo: 'Laura@mail.com', modulo_id: 3 },
+{ nombre: 'Brayan', correo: 'Brayan@mail.com', modulo_id: 1}
+]
+modulos: [{id:1, nombre: 'Fundamentos'}, { id:2, nombre: 'React'}, { id:3, nombre: 'Node'}]
+out: [{ nombre: 'Andrea', modulo: 'Fundamentos', correo: 'Andrea@mail.com', ...}]
+Tu código: */
 
 const personass = [
   { nombre: "Andrea", correo: "Andrea@mail.com", modulo_id: 1 },
@@ -560,6 +631,7 @@ function estudiantesPorModulo(personas, modulos) {
 console.log(estudiantesPorModulo(personass, moduloss));
 
 /* 
+  *            RESOLUTION STEPS:
   * let personsArr = [];
   * empty array created = []
   * nested bucle for 
@@ -584,12 +656,14 @@ console.log(estudiantesPorModulo(personass, moduloss));
 */
 /* ********************************************************************************* */
 
+// exercise 16
+
 /* 💡 Para el siguiente investiga sobre un método para arrays llamado arr.sort() */
-// Retrona un array de personas ordenadas por edad de menor a mayor.
-// Ejemplo:
-// in: [{ nombre: 'Lukas', edad: 20 }, { nombre: 'Maria', edad: 19 }, { nombre: 'Marcos', edad: 21 }]
-// out: [{ nombre: 'Maria', edad: 19 }, { nombre: 'Lukas', edad: 20 }, { nombre: 'Marcos', edad: 21 }]
-// Tu código:
+/* Retrona un array de personas ordenadas por edad de menor a mayor.
+Ejemplo:
+in: [{ nombre: 'Lukas', edad: 20 }, { nombre: 'Maria', edad: 19 }, { nombre: 'Marcos', edad: 21 }]
+out: [{ nombre: 'Maria', edad: 19 }, { nombre: 'Lukas', edad: 20 }, { nombre: 'Marcos', edad: 21 }]
+Tu código: */
 
 const unorderedPeople = [
   { nombre: "Lukas", edad: 20 },
@@ -618,4 +692,4 @@ function ordenaPorEdad(personas) {
 { nombre: 'Marcos', edad: 21 }
 
 */
-console.log(ordenaPorEdad(unorderedPeople));
+console.log(ordenaPorEdad(unorderedPeople)); //[{ nombre: 'Maria', edad: 19 }, { nombre: 'Lukas', edad: 20 }, { nombre: 'Marcos', edad: 21 }]
